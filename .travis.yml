@@ -1,0 +1,14 @@
+language: node_js
+dist: bionic
+node_js: '12'
+cache: yarn
+install:
+- yarn
+script:
+- yarn lint
+- yarn test
+notifications:
+  slack:
+    secure: XDvvRYibkD36mkP5vKCrGuT/gvTyQqTFnfW/+nqjBpNBXOH+M9DzdUlGQn8uuDXiUnmf5+rlECmaIMXLjkIYgzZpiuFlty/iepjp7QTIE709YjSMgVY7hnzVftnBjhmJ5sNlbHbx0hYMmBYv+Sy1QZgX6glxS3bfgoin7LjkDSLnspYaVOhgJVnqkEUIIG4344oSRQgZSOf+fiHyw9cqs+05BQz1rmIcgySw7qjnZfLjZEJfs373kwbc0m0egy7zykNgiVCLMqeBqkwCaBJfCsuypbz1ZGBJwfhp19UL3eYagDPZ2doqtue7lfU21gRjqUNfuwi8TLbGt7fof6CmkFzWNy6XyXum6dc1EzYSNNYPsUI1mFRjSGa5xqjMCW3C3O2brxBzrSYgWQKu6NQmsUD43JQo1O9cIIG2oADIBIQBAXL0gjawJdH92gdlBAxU4Z9kZNEyrTMx/B6hvqvxyyXnJAzYRB6iH3VDBjvwnPPUYAAhegAYa5SHm7aIqkGwGcMWadKNNERVJMuCrKpj7GQE8cKhA48Hvi6QPTr0qW4Cq2WwUKGixLS4PCVIE70TTV2nspOuRFJez6EXZwYNZaGCEdqG14oQuZlTcM1clZcx58/Ds9x8r21LXlfteSddKVIuCFU2EBcbRgRT1X0lhz89+P+J07keT7w5YmGl+v4=
+    on_success: change # default: always
+    on_failure: always # default: always
